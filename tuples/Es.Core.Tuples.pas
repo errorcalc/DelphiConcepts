@@ -20,6 +20,8 @@ type
     constructor Create(Item1: T1; Item2: T2); overload;
   end;
 
+  // need create TTuple<...> for three to eight arguments
+
   TTuple = class
     class function Create<T1>(Item1: T1): TTuple<T1>; overload; static;
     class function Create<T1, T2>(Item1: T1; Item2: T2): TTuple<T1, T2>; overload; static;
