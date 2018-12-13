@@ -11,6 +11,11 @@ uses
   System.SysUtils,
   Es.Core.Tuples in 'Es.Core.Tuples.pas';
 
+function GetAnyTuple: TTuple<Integer, string>;
+begin
+  Result := TTuple.Create<Integer, string>(123, 'SUPER');
+end;
+
 begin
   var a := TTuple.Create<Integer, string>(123, 'abc');
   var b := TTuple.Create<Integer, string>(123, 'abc');
@@ -20,6 +25,9 @@ begin
   a.Item1 := 0;
 
   writeln('a = b: ', a = b);
+
+  writeln('GetAnyTuple = TTuple.Create<Integer, string>(123, ''SUPER''): ',
+    GetAnyTuple = TTuple.Create<Integer, string>(123, 'SUPER'));
 
   readln;
 end.
