@@ -1,4 +1,4 @@
-# Typles concept for Delphi Rio
+# Tuples concept for Delphi Rio
 
 ```delphi
 program ProjectTest;
